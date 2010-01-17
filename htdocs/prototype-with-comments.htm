@@ -1,0 +1,320 @@
+<!--
+
+All XHTML documents begin with a DOCTYPE; this one is for XHTML 1.0 Strict.
+Normally, the DOCTYPE is the very first line of XHTML files:
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
++ + + + + BEGIN html + + + + 
+-->
+
+<!--
+
+Change id="mysite-com" to your actual domain, replacing dots with hyphens 
+(e.g., example.org would be id="example-org"):
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="mysite-com">
+
+<!--
++ + + + + BEGIN head + + + + 
+-->
+
+<head>
+
+	<!-- 
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+
+	BASIC METADATA:
+
+	= = = = = = = = = = = = = = = = = = = = = = = = = 
+	-->
+
+	<!--
+		This line can be left as-is; it specifies the text/html content
+		type and the UTF-8 character set:
+	-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<!--
+		Always include a title for your page, and brand it with your 
+		site name:
+	-->
+	<title>Page Title: Site Name</title>
+
+
+
+
+
+	<!-- 
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+
+	LINK TO CSS:
+	
+	If you are creating a site that is not off of the site 
+	root, or if you are viewing your site with the file:// prefix, rather
+	than a local Web server at http://localhost/, you will need to change 
+	the href="" values to point to the correct location of your	CSS files.
+	
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+	-->
+
+	<!--
+		Reset CSS styles for desktop/laptop screens and print media:		
+	-->
+	<link rel="stylesheet" type="text/css" media="screen, print" href="/css/reset.css" />
+
+	<!--
+		CSS for your desktop/laptop screen design:
+	-->
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css" />
+
+	<!--
+		Corrective styles for IE 7 and earlier only, loaded using conditional 
+		comments (see http://www.quirksmode.org/css/condcom.html):
+	-->
+	<!--[if lte IE 7>
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/screen-ie.css" />
+	<![endif]-->
+
+	<!--
+		CSS for your print design:
+	-->
+	<link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+
+
+
+
+	<!--
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+
+	FACEBOOK-STYLE SHARE METADATA:
+	
+	Delete comments to use; see 
+	http://wiki.developers.facebook.com/index.php/Facebook_Share
+	for details.
+	
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+	--> 
+	
+	<!--
+	<meta name="title" content="Match this with the content of the title tag above." /> 
+	<meta name="description" content="A short description of this page." />
+	<link rel="image_src" href="http://mysite.com/media/share/thumbnail.jpg" /> 
+	-->
+
+
+
+
+
+	<!--
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+
+	FAVICONS
+	
+	The paths for each icon should be the same; use your full URL. Most
+	Web browsers will use the rel="icon" link, but Internet Explorer 
+	prefers the rel="shortcut icon" link. 
+	
+	In both cases, the type="" attribute-value should
+	reflect your icon type (e.g., "image/gif" for .gif files; "image/ico" for
+	.ico files).
+	
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+	--> 
+	
+	<!--
+	<link rel="icon" href="http://mysite.com/media/share/favicon.png" type="image/png" /> 
+	<link rel="shortcut icon" href="http://mysite.com/media/share/favicon.png" type="image/png" /> 
+	-->
+
+
+
+
+
+	<!--
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+
+	LINK TO JAVASCRIPT:
+	If you are creating a site that is not off of the site 
+	root, or if you are viewing your site with the file:// prefix, rather
+	than a local Web server at http://localhost/, you will need to change 
+	the src="" values to point to the correct location of your
+	JavaScript files.
+	= = = = = = = = = = = = = = = = = = = = = = = = =
+	-->
+
+	<!--
+		Mootools JavaScript Library (core):
+	-->
+	<script type="text/javascript" src="/js/mootools/mootools-core.js"></script>
+	<!--
+		SWFObject 2 Library:
+	-->
+	<script type="text/javascript" src="/js/swfobject/swfobject.js"></script>
+	<!--
+		Page-specific SWFObject 2 Javascript:
+	-->
+	<script type="text/javascript">
+	/*Page-specific JavaScript for SWFObject 2*/
+	</script>
+	<!--
+		Custom site-wide JavaScript:
+	-->
+	<script type="text/javascript" src="/js/site.js"></script>
+
+<!--
++ + + + + CLOSE /head + + + + +
+-->
+
+</head>
+
+<!--
++ + + + + BEGIN body + + + + +
+-->
+ 
+<body>
+	
+	<!--
+		All page content is wrapped inside of a container division.
+	-->   
+	<div id="container">
+		
+		<!--
+			The header division is used for branding your site.
+		-->
+		<div id="header">
+			
+			<!--
+				Write the name of your site, and replace
+				http://mysite.com/ with the full URL of
+				your home page:
+			-->
+			<h1><a href="http://mysite.com/" rel="home">Site Name</a></h1>
+			
+			<!--
+				Write a short tagline or description for your
+				site:
+			-->
+			<p class="tagline">
+				Site Tagline
+			</p>
+			
+			<!--
+				These links are to aid site accessibility, by
+				allowing users to "jump" to the navigation or
+				content areas of your pages:
+			-->
+			<ul class="accessibility">
+				<li><a href="#navigation">Jump to Navigation</a></li>
+				<li><a href="#content">Jump to Content</a></li>
+			</ul>
+		
+		<!--
+			The header division closes:
+		-->
+		</div>
+		
+		<!--
+			The content division contains all of your page content,
+			and is divided into "main" and "supporting" divisions.
+		-->
+		<div id="content">
+		
+			<!--
+				Write the main content of your page inside 
+				the main division:
+			-->
+			<div id="main">
+				<!--
+					Title every page:
+				-->
+				<h2>Page Title</h2>
+				
+			</div>
+			
+			<!--
+				Write any supporting or sidebar content inside  
+				the supporting division:
+			-->
+			<div id="supporting">
+			</div>
+		
+		<!--
+			The content division closes:
+		-->
+		</div>
+		
+		<!--
+			Write the labels for your site navigation in 
+			in the navigation's unordered list:
+		-->
+		<ul id="navigation">
+			<!--
+				Write the correct path for the href value:
+			-->			
+			<li><a href="/">Home</a></li>
+			
+			<!--
+				Write the correct path for href value and a meaningful label:
+			-->
+			<li><a href="/about.htm">About</a></li>
+			
+			<!--
+				Write additional labels and paths for href, as needed. Copy
+				and modify the code above, or use this example and remove
+				the comment tags:
+			-->
+			<!--<li><a href="/page.htm">Page</a></li>-->
+		</ul>
+
+		<!--
+			The footer division completes the branding of your site. Consider
+			adding a copyright statement and perhaps a Creative Commons license
+			(see http://creativecommons.org/choose/). 
+		
+			The footer also includes links to validate your page's XHTML and CSS.
+			This work only if your pages are posted to the Web.
+		-->
+		<div id="footer">
+			
+			<!--
+				Write a copyright statement and note any credits for 
+				your site (e.g., libraries, images, etc.):
+			-->
+			<p class="copyright">
+				Site information, credits, copyright/license.
+			</p>
+			
+			<!--
+				A list of links to validate your pages; these links
+				only work on live, Web-available sites:
+			-->
+			<ul class="validators">
+				<li><a href="http://validator.w3.org/check?uri=referer" title="Validate this page's XHTML">XHTML</a></li>
+				<li><a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate this page's CSS">CSS</a></li>
+			</ul>
+			
+		<!--
+			The footer division closes:
+		-->
+		</div>
+	
+	<!--
+		The container division closes:
+	-->
+	</div>
+
+<!--
++ + + + + CLOSE /body + + + + 
+-->
+</body>
+
+<!--
++ + + + + CLOSE /html + + + + 
+-->
+</html>
+
