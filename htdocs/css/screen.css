@@ -105,7 +105,7 @@ div#content ol li {
 /*Nested*/
 div#content * li ol {
 }
-div#content * lo ol li {
+div#content * li ol li {
 }
 
 /*Content Typography: Links*/
