@@ -12,11 +12,11 @@ Normally, the DOCTYPE is the very first line of XHTML files:
 
 <!--
 
-Change id="mysite-com" to your actual domain, replacing dots with hyphens 
+Change id="example-com" to your actual domain, replacing dots with hyphens
 (e.g., example.org would be id="example-org"):
 
 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="mysite-com">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="example-com">
 
 <!--
 + + + + + BEGIN head + + + + 
@@ -103,7 +103,7 @@ Change id="mysite-com" to your actual domain, replacing dots with hyphens
 	<!--
 	<meta name="title" content="Match this with the content of the title tag above." /> 
 	<meta name="description" content="A short description of this page." />
-	<link rel="image_src" href="http://mysite.com/media/share/thumbnail.jpg" /> 
+	<link rel="image_src" href="http://example.com/media/share/thumbnail.jpg" />
 	-->
 
 
@@ -127,8 +127,8 @@ Change id="mysite-com" to your actual domain, replacing dots with hyphens
 	--> 
 	
 	<!--
-	<link rel="icon" href="http://mysite.com/media/share/favicon.png" type="image/png" /> 
-	<link rel="shortcut icon" href="http://mysite.com/media/share/favicon.png" type="image/png" /> 
+	<link rel="icon" href="http://example.com/media/share/favicon.png" type="image/png" />
+	<link rel="shortcut icon" href="http://example.com/media/share/favicon.png" type="image/png" />
 	-->
 
 
@@ -179,9 +179,9 @@ Change id="mysite-com" to your actual domain, replacing dots with hyphens
 <body>
 	
 	<!--
-		All page content is wrapped inside of a container division.
+		All page content is wrapped inside of a page division.
 	-->   
-	<div id="container">
+	<div id="page">
 		
 		<!--
 			The header division is used for branding your site.
@@ -190,10 +190,10 @@ Change id="mysite-com" to your actual domain, replacing dots with hyphens
 			
 			<!--
 				Write the name of your site, and replace
-				http://mysite.com/ with the full URL of
+				http://example.com/ with the full URL of
 				your home page:
 			-->
-			<h1><a href="http://mysite.com/" rel="home">Site Name</a></h1>
+			<h1><a href="http://example.com/" rel="home">Site Name</a></h1>
 			
 			<!--
 				Write a short tagline or description for your
@@ -305,7 +305,7 @@ Change id="mysite-com" to your actual domain, replacing dots with hyphens
 		</div>
 	
 	<!--
-		The container division closes:
+		The page division closes:
 	-->
 	</div>
 
