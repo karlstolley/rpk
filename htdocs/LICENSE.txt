@@ -1,6 +1,6 @@
-The Rapid Prototyping Kit (RPK), <http://sustainablewebdesign.com/rpk/>.
+The Rapid Prototyping Kit (RPK), <http://sustainablewebdesign.com/book/rpk/>.
 
-Copyright (c) 2009-2011 Karl Stolley, <http://karlstolley.com/>, Dual licensed under the MIT Style License and the GPL license.
+Copyright (c) 2009-2011 Karl Stolley, <http://karlstolley.com/>, Dual licensed under the MIT License and the GPL licenses.
 
 Libraries included with the RPK:
 
@@ -16,6 +16,13 @@ Libraries included with the RPK:
     Released under the MIT, BSD, and GPL Licenses.
  
 * SWFObject v2.2 <http://code.google.com/p/swfobject/> is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+
+* Yahoo! YUI 2: Reset CSS <http://developer.yahoo.com/yui/reset/>
+    
+    Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+    Code licensed under the BSD License:
+    http://developer.yahoo.com/yui/license.html
+    version: 2.8.2r1
 
 The MIT License
 
