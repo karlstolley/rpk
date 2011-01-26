@@ -6,11 +6,9 @@
 h1,h2,h3,h4,h5,h6,b,strong { font-weight: bold; }
 /* Italic on i, em, and cite: */
 i,em,cite { font-style: italic; }
-/* Dotted border and help cursor to abbr and acronym: */
-abbr,acronym { border-bottom: 1px dotted; cursor: help; }
 
 /*
-  Print all text color as black.
+  Print all text color as black, including links.
 */
 
 * { color: black; }
@@ -45,3 +43,13 @@ div#content a:visited:after {
    font-family: "Courier New", Courier, monospace;
 }
 
+/*
+  Treat acronyms and abbreviations similarly, but
+  run the expansion in the title attribute in 
+  parentheses.
+*/
+
+abbr:after,
+acronym:after {
+     content: " (" attr(title) ") ";
+}
