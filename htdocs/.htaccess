@@ -1,0 +1,45 @@
+##
+## This server configuration file should NOT be used with an XAMPP or other localhost/
+## testing environment. The examples here are only models and, while they should work
+## in most Apache Web server environments, use these lines as models only--do your
+## research and find out the configurations that work best with your particular Web host.
+##
+##
+## Remove the hashes (#) from the following 3 lines to force no-www style URLs,
+## in the form of http://example.com/ This requires mod_rewrite to be enabled on your server.
+##
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+##
+##
+## Remove the hashes (#) from the following 3 lines to force yes-www style URLs,
+## in the form of http://www.example.com/ This requires mod_rewrite to be enabled on your server.
+##
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} !^www\.(.+)$ [NC]
+# RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
+##
+##
+## Directory indexes: Most Apache servers should be configured to server index.htm or
+## index.html, or even index.php on URLs that end with a / (e.g., http://example.com/).
+## But if yours is not, you can removing the hash (#) from the following line:
+##
+# DirectoryIndex index.htm index.html index.php
+##
+##
+## Some Apache Web servers are configured to list the files in a directory that does not
+## have an index.htm, index.html, or index.php file. To prevent those listings, uncomment the
+## following lines by removing the hash (#):
+##
+# Options -Indexes
+##
+##
+## If you wish to parse PHP code embedded in files ending in .htm or .html, you will have
+## to modify your server. The following line might work, if you uncomment it by removing the
+## hash (#), but it would be better to research how to parse PHP in .htm or .html for your
+## specific Web host.
+##
+# AddHandler application/x-httpd-php .php .htm .html
+##
+##s
