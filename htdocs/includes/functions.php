@@ -37,7 +37,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
 <!--
   <meta name="title" content="'.$rpkpage['page_title'].'" />
   <meta name="description" content="'.$rpkpage['share_description'].'" />
-  <link rel="image_src" href="http://example.com/media/share/thumbnail.jpg" />
+  <link rel="image_src" href="http://example.com/media/img/thumbnail.jpg" />
 -->
 
 <!--REMOVE COMMENT TAGS TO USE FAVICON LINKS:-->
