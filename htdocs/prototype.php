@@ -1,71 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="example-com">
+<?php
+/*
+  Include functions.php file; assumes location in includes/ off of 
+  root Web folder (e.g., htdocs/includes/)
+*/
+include($_SERVER['DOCUMENT_ROOT']."/includes/functions.php");
+/*
+  Unique page content; rename items on the right between single quotes. Escape any single quotes
+  or apostrophes you use with a slash (\). For example, 'Eric\'s Contact Information'
+*/
+$rpkpage = array(
+  'page_title'       => 'Page Title', /*Page title*/
+  'share_description' => 'A short description of this page.', /*Share description*/
+  'body_class'   => '' /*Add a class like 'home' to body; leave quotes empty, '', for no class*/
+);
 
-<head>
+rpk_header($rpkpage);
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Page Title: Site Name</title>
-
-  <link rel="stylesheet" type="text/css" media="screen, print" href="/css/reset.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css" />
-  <!--[if lte IE 7>
-  <link rel="stylesheet" type="text/css" media="screen" href="/css/screen-ie.css" />
-  <![endif]-->
-  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
-
-<!--REMOVE COMMENT TAGS TO USE FACEBOOK SHARE METADATA:-->
-
-<!--
-  <meta name="title" content="Match this with the content of the title tag above." /> 
-  <meta name="description" content="A short description of this page." />
-  <link rel="image_src" href="http://example.com/media/share/thumbnail.jpg" />
--->
-
-<!--REMOVE COMMENT TAGS TO USE FAVICON LINKS:-->
-
-  <!--For most browsers:-->
-<!--
-  <link rel="icon" href="http://example.com/favicon.png" type="image/png" />
--->
-  <!--For Internet Explorer:-->
-<!--
-  <link rel="shortcut icon" href="http://example.com/favicon.ico" />
--->
-
-  <!--Load the jQuery library-->
-  <script type="text/javascript" src="/js/jquery/jquery.js"></script>
-  <!--Load site-wide JavaScript-->
-  <script type="text/javascript" src="/js/site.js"></script>
-  <!--Load SWFObject for working with Flash media; uncomment to load.-->
-<!--
-  <script type="text/javascript" src="/js/swfobject/swfobject.js"></script>
--->
-  <!--Page-specific JavaScript, e.g., for use with SWFObject-->
-  <script type="text/javascript">
-  /*Page-specific JavaScript*/
-  </script>
-
-</head>
-
-<body>
-
-<div id="page">
-
-  <div id="header">
-
-    <h1><a href="http://example.com/" rel="home">Site Name</a></h1>
-
-    <p class="tagline">
-      Site Tagline
-    </p>
-
-    <ul class="accessibility">
-      <li><a href="#navigation">Jump to Navigation</a></li>
-      <li><a href="#content">Jump to Content</a></li>
-    </ul>
-
-  </div>
-
+?>
+<!--This part is just plain XHTML:-->
   <div id="content">
 
     <div id="main">
@@ -78,25 +30,14 @@
 
   </div>
 
-  <ul id="navigation">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about.htm">About</a></li>
-  </ul>
+<!--
+  Now PHP opens back up to output the navigation and footer
+  as defined in /includes/functions.php
+-->
+<?php
 
-  <div id="footer">
-    <p class="credits">
-      Site information, credits, license.
-    </p>
-    <ul class="validators">
-      <li><a href="http://validator.w3.org/check?uri=referer"
-        title="Validate this page's XHTML">XHTML</a></li>
-      <li><a href="http://jigsaw.w3.org/css-validator/check/referer"
-        title="Validate this page's CSS">CSS</a></li>
-    </ul>
-  </div>
+rpk_navigation();
 
-</div>
+rpk_footer();
 
-</body>
-
-</html>
+?>
