@@ -4,11 +4,12 @@
   through the end of <div id="header">.
   
   Edit the following lines to customize the function your site:
-  --Site Name on line 25
-  --image_src link on line 39
-  --Site Favicon/Icon URLS on lines 46 and 50
-  --Site URL in the <a> tag on line 74
-  --Site Tagline on line 77
+  --Site id on line 21
+  --Site Name on line 26
+  --image_src link on line 40
+  --Site Favicon/Icon URLS on lines 47 and 51
+  --Site URL in the <a> tag on line 75
+  --Site Tagline on line 78
   
   Remember to escape any single quotes with a slash, \'
   
@@ -22,7 +23,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Page Title: Site Name</title>
+  <title>'.$rpkpage['page_title'].': Site Name</title>
 
   <link rel="stylesheet" type="text/css" media="screen, print" href="/css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css" />
@@ -34,8 +35,8 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
 <!--REMOVE COMMENT TAGS TO USE FACEBOOK SHARE METADATA:-->
 
 <!--
-  <meta name="title" content="Match this with the content of the title tag above." /> 
-  <meta name="description" content="A short description of this page." />
+  <meta name="title" content="'.$rpkpage['page_title'].'" />
+  <meta name="description" content="'.$rpkpage['share_description'].'" />
   <link rel="image_src" href="http://example.com/media/share/thumbnail.jpg" />
 -->
 
@@ -65,7 +66,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
 
 </head>
 
-<body>
+<body class="'.$rpkpage['body_class'].'">
 
 <div id="page">
 

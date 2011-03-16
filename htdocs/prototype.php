@@ -9,9 +9,9 @@ include($_SERVER['DOCUMENT_ROOT']."/includes/functions.php");
   or apostrophes you use with a slash (\). For example, 'Eric\'s Contact Information'
 */
 $rpkpage = array(
-  'page_title'       => 'Page Title', /*Page title*/
+  'page_title'        => 'Page Title', /*Page title*/
   'share_description' => 'A short description of this page.', /*Share description*/
-  'body_class'   => '' /*Add a class like 'home' to body; leave quotes empty, '', for no class*/
+  'body_class'        => '' /*Add a class like 'home' to body; leave empty for no class*/
 );
 
 rpk_header($rpkpage);
