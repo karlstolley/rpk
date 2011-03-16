@@ -89,7 +89,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.or
   Navigation function outputs your navigation; modify it as you would your navigation
   in the basic XHTML version; remember to escape any single quotes with a slash, \'
 */
-rpk_navigation() {
+function rpk_navigation() {
 echo '  <ul id="navigation">
     <li><a href="/">Home</a></li>
     <li><a href="/about.htm">About</a></li>
