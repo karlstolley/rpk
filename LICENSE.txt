@@ -4,15 +4,15 @@ Copyright (c) 2009-2011 Karl Stolley, <http://karlstolley.com/>. Dual licensed u
 
 Libraries included with the RPK:
 
-* jQuery JavaScript Library v1.4.4 <http://jquery.com/>
+* jQuery JavaScript Library v1.5.1 <http://jquery.com/>
     
-    Copyright 2010, John Resig
+    Copyright 2011, John Resig
     Dual licensed under the MIT or GPL Version 2 licenses.
     http://jquery.org/license
     
     Includes Sizzle.js
     http://sizzlejs.com/
-    Copyright 2010, The Dojo Foundation
+    Copyright 2011, The Dojo Foundation
     Released under the MIT, BSD, and GPL Licenses.
  
 * SWFObject v2.2 <http://code.google.com/p/swfobject/> is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
