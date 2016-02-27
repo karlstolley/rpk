@@ -11,5 +11,5 @@ See the LICENSE.txt file.
 
 ## To Do
 
-[ ] Recommend `favicon.ico` dropped into site root
-[ ] Add touch icon examples, other elements from this obsessive guide: https://github.com/audreyr/favicon-cheat-sheet
+* [ ] Recommend `favicon.ico` dropped into site root
+* [ ] Add touch icon examples, other elements from this obsessive guide: https://github.com/audreyr/favicon-cheat-sheet
