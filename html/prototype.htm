@@ -5,8 +5,10 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" media="screen" href="/css/screen.css" />
   <link rel="stylesheet" media="print" href="/css/print.css" />
+  <!--Remove the meta-viewport element if you're not doing a responsive design:-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 
-<!--REMOVE COMMENT TAGS TO USE FACEBOOK SHARE METADATA:-->
+<!--Remove the comment delimiters to use Facebook Open Graph elements.-->
   <!--These first four meta elements are required for the Facebook Open Graph protocol:-->
 <!--
   <meta property="og:title" content="" />
@@ -18,29 +20,29 @@
 <!--
   <meta property="og:description" content="" />
 -->
-
 </head>
 <body>
 <div id="page">
 
   <header id="header">
-    <h1><a href="http://example.com/" rel="home">Site Name</a></h1>
-    <p class="tagline">
-      Site Tagline
-    </p>
+    <h1 id="sitename"><a href="http://example.com/" rel="home">Site Name</a></h1>
+    <h2 id="tagline">Site Tagline</h2>
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
-      <li><a href="#content">Jump to Content</a></li>
+      <li><a href="#main">Jump to Content</a></li>
     </ul>
   </header>
 
-  <div id="content">
-    <div id="main">
+  <main id="main">
+    <article id="primary">
       <h2>Page Title</h2>
-    </div>
-    <div id="supporting">
-    </div>
-  </div>
+    </article>
+    <!--
+    <article id="supporting">
+      <h1>Supporting Content Heading</h1>
+    </article>
+    -->
+  </main>
 
   <nav id="navigation">
     <ul>
@@ -51,16 +53,14 @@
 
   <footer id="footer">
     <p class="credits">
-      Site information, credits, license.
+      Site information, credits, license. Created with the
+      <a href="https://github.com/karlstolley/rpk">RPK</a>
+      using <a href="http://validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a>
+      and <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
     </p>
-    <ul class="validators">
-      <li><a href="http://validator.w3.org/check?uri=referer"
-        title="Validate this page’s HTML">HTML</a></li>
-      <li><a href="http://jigsaw.w3.org/css-validator/check/referer"
-        title="Validate this page’s CSS">CSS</a></li>
-    </ul>
   </footer>
 
+<!--/#page-->
 </div>
 
 <!--Uncomment to load site-wide JavaScript-->
