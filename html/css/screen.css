@@ -49,6 +49,13 @@ table {
 	border-spacing: 0;
 }
 
-/* Base Styles */
-
 /* Begin writing your own styles below this line...*/
+
+/* Base Styles: basic selectors for text content: headings, paragraphs, lists */
+
+/* Layout Styles: mostly ID selectors for positioning major page components */
+
+/* Modular Styles: repeated, mostly class selectors, for styling page components  */
+
+/* State Styles: styles applied based on JavaScript and user interaction */
+
