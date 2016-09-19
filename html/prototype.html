@@ -8,15 +8,16 @@
   <!--Remove the meta-viewport element if you're not doing a responsive design:-->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 
-<!--Remove the comment delimiters to use Facebook Open Graph elements.-->
-  <!--These first four meta elements are required for the Facebook Open Graph protocol:-->
+<!-- Remove the comment delimiters to use Facebook Open Graph elements. -->
+
+  <!-- These first four meta elements are required for the Facebook Open Graph protocol: -->
 <!--
   <meta property="og:title" content="" />
-  <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
+  <meta property="og:type" content="website" />
 -->
-  <!--Optional, but a good idea to include; make one sentence or two:-->
+  <!-- Optional, but a good idea to include; make one sentence or two: -->
 <!--
   <meta property="og:description" content="" />
 -->
@@ -25,31 +26,27 @@
 <div id="page">
 
   <header id="header">
-    <h1 id="sitename"><a href="http://example.com/" rel="home">Site Name</a></h1>
-    <h2 id="tagline">Site Tagline</h2>
-    <ul class="accessibility">
-      <li><a href="#navigation">Jump to Navigation</a></li>
-      <li><a href="#main">Jump to Content</a></li>
-    </ul>
+    <h1 class="sitename"><a href="http://example.com/" rel="home">Site Name</a></h1>
+    <p class="tagline">Site Tagline</h2>
+    <nav id="navigation">
+      <ul class="navigation">
+        <li class="accessibility"><a href="#main">Skip to page content</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.htm">About</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
-    <article id="primary">
+    <article>
       <h2>Page Title</h2>
     </article>
     <!--
-    <article id="supporting">
-      <h1>Supporting Content Heading</h1>
-    </article>
+    <aside id="supporting">
+      <h2>Supporting Content Heading</h2>
+    </aside>
     -->
   </main>
-
-  <nav id="navigation">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about.htm">About</a></li>
-    </ul>
-  </nav>
 
   <footer id="footer">
     <p class="credits">
@@ -63,10 +60,7 @@
 <!--/#page-->
 </div>
 
-<!--Uncomment to load site-wide JavaScript-->
-<!--
 <script src="/js/site.js"></script>
--->
 
 </body>
 </html>
