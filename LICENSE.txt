@@ -1,28 +1,15 @@
 The Rapid Prototyping Kit (RPK), <http://sustainablewebdesign.com/book/rpk/>.
 
-Copyright (c) 2009-2011 Karl Stolley, <http://karlstolley.com/>. Dual licensed under the MIT License and the GPL License.
+Copyright (c) 2009-2016 Karl Stolley, <https://karlstolley.com/>. Dual licensed under the MIT License and the GPL License.
 
 Libraries included with the RPK:
 
-* jQuery JavaScript Library v1.5.1 <http://jquery.com/>
-    
-    Copyright 2011, John Resig
-    Dual licensed under the MIT or GPL Version 2 licenses.
-    http://jquery.org/license
-    
-    Includes Sizzle.js
-    http://sizzlejs.com/
-    Copyright 2011, The Dojo Foundation
-    Released under the MIT, BSD, and GPL Licenses.
- 
-* SWFObject v2.2 <http://code.google.com/p/swfobject/> is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+* Eric Meyer's Reset CSS
+  http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
 
-* Yahoo! YUI 2: Reset CSS <http://developer.yahoo.com/yui/reset/>
-    
-    Copyright (c) 2011, Yahoo! Inc. All rights reserved.
-    Code licensed under the BSD License:
-    http://developer.yahoo.com/yui/license.html
-    version: 2.8.2r1
+
 
 The MIT License
 
