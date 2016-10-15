@@ -1,8 +1,8 @@
 {
-
+  "rpk-info": {
     // To learn how to install the stylelint CLI, visit
     // https://github.com/stylelint/stylelint/blob/master/docs/user-guide/cli.md
-
+  },
   "rules": {
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always",
