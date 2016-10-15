@@ -53,6 +53,14 @@ table {
 
 /* Base Styles: basic selectors for text content: headings, paragraphs, lists */
 
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* Layout Styles: mostly ID selectors for positioning major page components */
 
 /* Modular Styles: repeated, mostly class selectors, for styling page components  */
