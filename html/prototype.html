@@ -5,47 +5,74 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" media="screen" href="/css/screen.css" />
   <link rel="stylesheet" media="print" href="/css/print.css" />
-  <!--Remove the meta-viewport element if you're not doing a responsive design:-->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 
-<!-- Remove the comment delimiters to use Facebook Open Graph elements. -->
-
   <!-- These first four meta elements are required for the Facebook Open Graph protocol: -->
-<!--
+  <!--
   <meta property="og:title" content="" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
   <meta property="og:type" content="website" />
--->
+  -->
   <!-- Optional, but a good idea to include; make one sentence or two: -->
-<!--
+  <!--
   <meta property="og:description" content="" />
--->
+  -->
 </head>
 <body>
 <div id="page">
 
   <header id="header">
-    <h1 class="sitename"><a href="http://example.com/" rel="home">Site Name</a></h1>
-    <p class="tagline">Site Tagline</h2>
+    <h1><a href="http://example.com/" rel="home">Site Name</a></h1>
+    <p class="tagline">Site Tagline</p>
     <nav id="navigation">
       <ul class="navigation">
         <li class="accessibility"><a href="#main">Skip to page content</a></li>
         <li><a href="/">Home</a></li>
-        <li><a href="/about.htm">About</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <article>
+    <article id="primary">
       <h2>Page Title</h2>
+      <!-- Pattern for long <article> with multiple <section> elements: -->
+      <!--
+      <section>
+        <h3>Section Title</h3>
+      </section>
+      <section>
+        <h3>Section Title</h3>
+      </section>
+      <section>
+        <h3>Section Title</h3>
+      </section>
+      -->
     </article>
+
     <!--
+      Use this markup pattern instead of <article> for a <section>-based overview-like page:
+    -->
+    <!--
+    <section id="primary">
+      <h2>Page Title</h2>
+      <article>
+        <h3>Article Title</h3>
+      </article>
+      <article>
+        <h3>Article Title</h3>
+      </article>
+      <article>
+        <h3>Article Title</h3>
+      </article>
+    </section>
+    -->
+
     <aside id="supporting">
       <h2>Supporting Content Heading</h2>
     </aside>
-    -->
+
   </main>
 
   <footer id="footer">
