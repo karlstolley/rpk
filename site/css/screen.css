@@ -8,12 +8,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* ===== BASE STYLES ============ */
 /* Basic selectors for text content: headings, paragraphs, lists */
 
+/* Optimal Typographic Rendering */
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+/* Responsive Media */
+audio,
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+picture img {
+  width: 100%;
 }
 
 /* ===== LAYOUT STYLES ========== */
