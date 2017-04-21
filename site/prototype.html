@@ -6,17 +6,15 @@
   <link rel="stylesheet" media="screen" href="/css/screen.css" />
   <link rel="stylesheet" media="print" href="/css/print.css" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-
-  <!-- These first four meta elements are required for the Open Graph protocol: -->
+  <!-- Open Graph Protocol Meta Tags: -->
   <!--
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
-  <meta property="og:type" content="website" />
-  -->
-  <!-- Optional, but a good idea to include; make one sentence or two: -->
-  <!--
-  <meta property="og:description" content="" />
+  <meta property="og:image:type" content="" />
   -->
 </head>
 <body>
@@ -35,6 +33,7 @@
   </header>
 
   <main id="content">
+
     <article id="primary">
       <h2>Page Title</h2>
       <!-- Pattern for long <article> with multiple <section> elements: -->
@@ -70,31 +69,37 @@
     -->
 
     <aside id="supporting">
-      <h2>Supporting Content Heading</h2>
+      <h2>Supporting Page-Content Heading</h2>
+      <!--
+        If the supporting content is related to a specific article or section, nest your <aside>
+        inside the relevant <article> or <section> tag. Do not reuse the `supporting` id if
+        you have multiple <aside> elements on a page.
+
+        And if the supporting content is repeated over multiple pages, move your <aside> element
+        outside of the <main> tag.
+      -->
     </aside>
 
   </main>
 
-  <footer id="footer">
+  <footer id="footer" prefix="dc: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#">
     <p class="credits">
-      Site information, credits, license. Created with the
-      <a href="https://github.com/karlstolley/rpk">RPK</a>
-      using <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a>
-      and <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
-    </p>
-    <!-- Creative Commons -->
-    <!--
-    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-      <br />
-      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Companion Site for How to Design and Write Web Pages Today</span>
+      <!-- Creative Commons -->
+      <!--
+      <cite property="dc:title">Site or Page Title</cite>
       by
-      <a xmlns:cc="http://creativecommons.org/ns#" href="https://karlstolley.com/" property="cc:attributionName" rel="cc:attributionURL">Karl Stolley</a>
+      <a href="http://example.com/"
+        property="cc:attributionName"
+        rel="cc:attributionURL">Site or Page Author</a>
       is licensed under a
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-      <br />
-      Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://webpg.es/" rel="dct:source">https://webpg.es/</a>.
-    -->
+      <a href="http://creativecommons.org/licenses/by/4.0/"
+        rel="license">Creative Commons Attribution 4.0 International License</a>. Based on a work at
+      <a href="http://example.com" rel="dc:source">http://example.com/</a>.
+      -->
+      Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
+      <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a> and
+      <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
+    </p>
   </footer>
 
 <!--/#page-->
