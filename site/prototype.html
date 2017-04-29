@@ -38,8 +38,10 @@
       <h2>Page Title</h2>
       <p>
         Be sure to begin your page-design work with your browser’s viewport sized very small. Also
-        try using Responsive Design Mode in
-        <a href="https://www.mozilla.org/firefox/developer/">Firefox Developer Edition</a>.
+        try using <a
+          href="https://developer.mozilla.org/docs/Tools/Responsive_Design_Mode">Responsive
+        Design Mode</a>
+        in <a href="https://www.mozilla.org/firefox/developer/">Firefox Developer Edition</a>.
       </p>
       <!-- Pattern for long <article> with multiple <section> elements: -->
       <!--
@@ -53,6 +55,8 @@
         <h3>Section Title</h3>
       </section>
       -->
+
+    <!--/#primary-->
     </article>
 
     <!--
@@ -74,7 +78,7 @@
     -->
 
     <aside id="supporting">
-      <h2>Supporting Page-Content Heading</h2>
+      <h2>Supporting Content Title</h2>
       <!--
         If the supporting content is related to a specific article or section, nest your <aside>
         inside the relevant <article> or <section> tag. Do not reuse the `supporting` id if
@@ -83,17 +87,19 @@
         And if the supporting content is repeated over multiple pages, move your <aside> element
         outside of the <main> tag.
       -->
+
+    <!--/#supporting-->
     </aside>
 
+  <!--/#content-->
   </main>
 
   <footer id="footer" prefix="dc: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#">
     <ul class="credits">
-      <li class="copyright">
-        <cite property="dc:title">Site or Page Title</cite> by
+      <li class="rights">
+        <cite property="dc:title">Site or Page Title</cite> © by
         <a href="http://example.com/"
-          property="dc:creator"
-          property="cc:attributionName"
+          property="dc:creator cc:attributionName"
           rel="cc:attributionURL">Site or Page Author</a>.
         <!-- Creative Commons -->
         <!--
@@ -103,11 +109,12 @@
         at <a href="http://example.com" rel="dc:source">http://example.com/</a>.
         -->
       </li>
-    <li class="colophon">
-      Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
-      <a href="//validator.w3.org/check?uri=referer" title="Validate HTML">HTML</a> and
-      <a href="//jigsaw.w3.org/css-validator/check/referer" title="Validate CSS">CSS</a>.
-    </li>
+      <li class="colophon">
+        Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
+        <a href="https://validator.w3.org/check/referer">HTML</a> and
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>.
+      </li>
+    </ul>
   </footer>
 
 <!--/#page-->
