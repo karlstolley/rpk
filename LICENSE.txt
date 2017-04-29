@@ -1,6 +1,6 @@
-The Rapid Prototyping Kit (RPK), <http://sustainablewebdesign.com/book/rpk/>.
+The Rapid Prototyping Kit (RPK), <https://webpg.es/rpk/>.
 
-Copyright (c) 2009-2016 Karl Stolley, <https://karlstolley.com/>. Dual licensed under the MIT License and the GPL License.
+Copyright (c) 2009-2017 Karl Stolley, <https://karlstolley.com/>. Dual licensed under the MIT License and the GPL License.
 
 Libraries included with the RPK:
 
