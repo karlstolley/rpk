@@ -1,11 +1,54 @@
-/* print.css Print Styles */
+/* Print CSS */
 
-/* Base Styles */
+/* Minified Eric Meyer reset CSS; see css/_reset.css */
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,main,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable*/
 
-/* Bold on headings, b, and strong */
-h1,h2,h3,h4,h5,h6,b,strong { font-weight: bold; }
-/* Italic on i, em, and cite: */
-i,em,cite { font-style: italic; }
+/*
+  End reset CSS.
+
+  Write custom styles in the appropriate sections below (BASE, LAYOUT, MODULAR, and STATE), whose
+  labels are derived from the book Scalable and Modular Architecture for CSS (SMACSS) by
+  Jonathan Snook. See https://smacss.com/
+
+  To save paper when testing print styles, see if your operating system or browser has a Print
+  Preview or Print to PDF feature.
+*/
+
+/* ===== BASE STYLES ============ */
+/* Primarily element selectors for content: headings, paragraphs, lists, and media */
+
+/* Optimal Typographic Rendering */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Responsive Media */
+audio,
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+picture img {
+  width: 100%;
+}
+
+/* Typical bold and italic styles */
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em,
+cite {
+  font-style: italic;
+}
 
 /*
   Print all text color as black, including links.
@@ -14,42 +57,51 @@ i,em,cite { font-style: italic; }
 * { color: black; }
 
 /*
-  Hide the accessibility navigation, the site navigation,
-  and the validator links, which are unhelpful when a page
-  is printed.
+  No underlines or border-bottom on hyperlinks or abbreviations:
 */
-
-ul.accessibility,
-ul#navigation,
-ul.validators {
-	display: none;
+a,
+abbr {
+  text-decoration: none;
+  border-bottom: 0;
 }
 
+
+/* ===== LAYOUT STYLES ========== */
+/* Primarily ID selectors for positioning sectioning elements */
+
+
+/* ===== MODULAR STYLES ========= */
+/* Primarily class selectors for styling unique page components  */
 
 /*
   Automatically print the URLs from hyperlinks in the
-  content area of a page, and put them in a monospace font,
-  in parentheses. 
-  This may not work on less standards-compliant browsers,
-  which do not support the :after pseudoelement and/or 
-  the content: property.
-  See http://www.alistapart.com/articles/goingtoprint/
+  content area of a page, unless the hyperlink is only
+  a fragment identifier (beginning with #):
 */
-
-div#content a:link:after,
-div#content a:visited:after {
+#content a:after {
    content: " (" attr(href) ") ";
-   font-size: 90%;
-   font-family: "Courier New", Courier, monospace;
+}
+#content a[href^="#"]:after {
+  content: "";
 }
 
 /*
-  Treat acronyms and abbreviations similarly, but
-  run the expansion in the title attribute in 
-  parentheses.
+  Output the full title of abbreviations when printed, assuming
+  the <abbr> element has a title attribute.
+*/
+abbr[title]:after {
+  content: " (" attr(title) ") ";
+}
+
+
+/* ===== STATE STYLES =========== */
+/*
+  Hide the the site navigation and the colophon's validator links
+  and other material, which are probably not necessary when a page
+  is printed.
 */
 
-abbr:after,
-acronym:after {
-     content: " (" attr(title) ") ";
+#navigation,
+.colophon {
+	display: none;
 }
