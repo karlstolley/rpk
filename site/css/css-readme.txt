@@ -1,26 +1,27 @@
-The css/ folder is where you store all of the .css files for your website.
+The css/ directory is where you store all of the .css files for your website.
 
-There are currently four CSS files in this folder; one you probably do not need to edit:
+There are currently three CSS files in this folder.
 
---reset.css:
-	CSS created by Yahoo! that effectively removes default web browser CSS
+One you do not need to edit:
 
-And three that you will need to edit to design your site:
+_reset.css:
+	CSS created by Eric Meyer and released into the public domain. It effectively removes default web
+	browser CSS. Minified versions of this file are included in the other two CSS files. This version
+	is only for readable reference.
 
---screen.css:
-	Where you write all of the styles for screen views of your pages (includes some base styles to
-	make up for the complete loss of styling from reset.css; also has a bunch of relationship
-	selectors that match basic structures in the RPK)
+And two that you will need to edit to design your site:
 
---screen-ie.css: 
-	A conditional CSS file where you write any style fixes, if necessary, for Internet Explorer 7 or
-	earlier. 
-	
---print.css
-	Where you write styles that determine how your pages will appear when they are printed.
+screen.css:
+	Where you write all of the styles for screen views of your pages. It includes some base styles to
+	make up for the complete loss of styling from the reset CSS. Reference the same screen.css file
+	from all pages in your site.
 
-Any additional CSS files that you add (such as an iphone.css file for iPhones) should also appear in
-the css folder.
+print.css:
+  Where you write styles that determine how your pages will appear when they are printed. It
+  includes some sensible styles to hide things like the site navigation, but also ensures that the
+  href values of hyperlinks are included when printing the page. Reference the same print.css file
+  from all pages in your site.
 
-The gfx/ sub-folder is where you should save all of your design images for your site (see gfx/gfx-readme.txt).
+The gfx/ subdirectory is where you store all of the images and artwork files referenced by CSS.
+Images referenced by an HTML <img /> tag belong in the media/img/ directory).
 
