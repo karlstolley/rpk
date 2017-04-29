@@ -1,7 +1,7 @@
 # The Rapid Prototyping Kit (RPK)
 
-The Rapid Prototyping kit is a set of files for quickly building Web pages using
-HTML5, Cascading Stylesheets (CSS), and JavaScript. It accompanies
+The Rapid Prototyping Kit is a set of files for quickly building Web pages using
+HTML, Cascading Stylesheets (CSS), and JavaScript. It accompanies
 a book by Karl Stolley titled *How to Design and Write Web Pages Today, 2nd ed.*
 (ABC-CLIO/Greenwood Press, 2017).
 
