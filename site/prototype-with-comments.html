@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <!--
-  File opens with the <!DOCTYPE> declaration above; avoid comments before that line.
-  See Chapter 11.
+  Valid HTML opens with the DOCTYPE declaration above; avoid comments before that line to
+  prevent older browsers from rendering in quirks mode. See Chapter 11.
 -->
+
 <!--
-  HTML opens with the `<html>` tag, including a `lang` attribute that should use the 2-digit
-  ISO code that describes the language the majority of the page is written in. `en` is for
-  English; other codes can be found at . See Chapter 11.
+  HTML opens with the `<html>` tag. The RPK’s includes a `lang` attribute that should use
+  the 2-digit ISO code that describes the language the majority of the page is written in.
+  `en` is for English. Fuller discussion in Chapter 11. Other language codes can be found
+  at https://www.loc.gov/standards/iso639-2/php/code_list.php.
 
   The `class` of `nojs` is a placeholder class, used for styling pages where JavaScript is
   not active. The RPK JavaScript file, `js/site.js`, swaps out `nojs` (no JavaSCript) with
   `hasjs` (has JavaScript). See Chapter
 
   Finally, the `id` attribute should be changed for the domain where a page is hosted.
-  `example-com` would be for `example.com`. The id on the book’s companion site is `webpg-es`,
-  for `webpg.es`. That `id` is known as a CSS signature, and can be referenced by users who
-  use custom stylesheets to modify how their browsers render a particular site. The technique
-  was described in Andy Clarke’s book *Transcending CSS*.
+  `example-com` would be for `example.com`. The id on the book’s companion site is
+  `webpg-es`, for `webpg.es`. That `id` is known as a CSS signature, and can be referenced
+  by users who use custom stylesheets to modify how their browsers render a particular
+  site. The technique was described in Andy Clarke’s book *Transcending CSS*.
 -->
 <html lang="en" class="nojs" id="example-com">
 
 <!--
-  Next, the `<head>` tag opens, and uses the RDFa `prefix` attribute to set a namespace, `og`,
-  for the Facebook Open Graph Protocol (OGP) metadata. If you do not use OGP, you can remove the
-  `prefix` attribute-value pair.
+  Next, the `<head>` tag opens, and uses the RDFa `prefix` attribute to set a namespace,
+  `og`, for the Facebook Open Graph Protocol (OGP) metadata. If you do not use OGP, you
+  can remove the `prefix` attribute-value pair.
 
-  If you decide to use OGP elsewhere in your document, the `prefix` attribute should be moved to
-  the `<html>` tag.
+  If you decide to use OGP elsewhere in your document, the `prefix` attribute should be
+  moved to the `<html>` tag.
 
   See Chapter 25 for more on OGP as well as the OGP documentation at http://ogp.me/
 -->
 <head prefix="og: http://ogp.me/ns#">
 
   <!--
-    Every complete page should open with a <title> tag. This uses a simple, accessible colon
-    to divide the page title from the site name. See Chapter 16 for the discussion on separators
-    and whether to place the page title or site name first for your site.
+    Every complete page should open with a <title> tag. This uses a simple, accessible
+    colon to divide the page title from the site name. See Chapter 16 for the discussion
+    on separators and whether to place the page title or site name first for your site.
   -->
   <title>Page Title: Site Name</title>
 
   <!--
     The `meta` tag with the `charset` attribute sets the encoding of the page to UTF-8, or
-    Universal Transformation Format, 8-bit. See Chapter 10 for a discussion of UTF-8 and the
-    need to encode your HTML files in your editor as UTF-8.
+    Universal Transformation Format, 8-bit. See Chapter 10 for a discussion of UTF-8 and
+    the need to encode your HTML files in your editor as UTF-8.
   -->
   <meta charset="utf-8" />
 
   <!--
-    The viewport meta element below instructs capable mobile browsers to display your page in
-    a mobile-friendly way. See the complete discussion of the viewport meta element in Chapter
-    14.
+    The viewport meta element below instructs capable mobile browsers to display your page
+    in a mobile-friendly way. See the complete discussion of the viewport meta element in
+    Chapter 14.
   -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
 
   <!--
-    Two `<link>` tags here load up the screen and print CSS files.
+    Two `<link>` tags here load the screen and print CSS files.
 
-    Note that both `<link>` tags are using root-relative paths to the files. If you have control
-    over your site's root directory or are using a proper local development server, like the
-    `http-server` that can be installed with Node.js, root-relative paths will work anywhere in
-    your site.
+    Note that both `<link>` tags are using root-relative paths to the files. If you have
+    control over your site's root directory or are using a proper local development
+    server, like the `http-server` that can be installed with Node.js, root-relative paths
+    will work anywhere in your site.
 
     If you need to use relative links, remove the opening slash from `/css/`. For example:
 
       <link rel="stylesheet" media="screen" href="css/screen.css" />
 
-    If you need a relative link that references your CSS file from a subdirectory off of your site
-    root, you'll need to add `../`. For example, an HTML file in the `/site/about/` directory
-    would reference a CSS file in `/site/css/`` like this:
+    If you need a relative link that references your CSS file from a subdirectory off of
+    your site root, you’ll need to add `../`. For example, an HTML file in the
+    `/site/about/` directory would reference a CSS file in `/site/css/`` like this:
 
       <link rel="stylesheet" media="screen" href="../css/screen.css" />
 
@@ -78,12 +80,13 @@
   <link rel="stylesheet" media="print" href="/css/print.css" />
 
   <!--
-    Next comes the basic stack of OGP meta tags. They are commented out in `prototype.html`, and
-    should either be deleted if you opt not to use them, or uncommented by deleting `<!--` above
-    and `-->` below this stack of `<meta>` tags with `property` attributes.
+    Next comes the basic stack of OGP meta tags. They are commented out in
+    `prototype.html`, and should either be deleted if you opt not to use them, or
+    uncommented by deleting `<!--` above and `-->` below this stack of `<meta>` tags with
+    `property` attributes.
 
-    See Chapter 25 for more on OGP as well as the OGP documentation at http://ogp.me/ for guidance
-    on correctly writing the `content` attributes on each OGP property.
+    See Chapter 25 for more on OGP as well as the OGP documentation at http://ogp.me/ for
+    guidance on correctly writing the `content` attributes on each OGP property.
   -->
   <!-- Open Graph Protocol Meta Tags: -->
   <!--
@@ -102,40 +105,40 @@
 </head>
 
 <!--
-  The `<body>` tag then opens, which will contain all of the content for your page. `<body>`
+  The `<body>` tag then opens. It will contain all of the content for your page. `<body>`
   is discussed at length in Chapters 11 and 16.
 
-  If you have a page that requires that are styled differently in a significant way from the
-  majority of your pages, you can add a `class` attribute on body. For example, the home page
-  `<body>` tag can be enhanced like this:
+  If you have a page that requires that are styled differently in a significant way from
+  the majority of your pages, you can add a `class` attribute on body. For example, the
+  home page `<body>` tag can be enhanced like this:
 
     <body class="home">
 
   Your CSS can then open any home-page-only styles with the `.home` selector as part of a
-  descendant selector. See Chapter 16 and 18 for guidance on this technique, and Chapter 12
-  for more information on different types of CSS selectors.
+  descendant selector. See Chapter 16 and 18 for guidance on this technique, and Chapter
+  12 for more information on different types of CSS selectors.
 -->
 <body>
 
 <!--
-  The only `<div>` tag in the RPK. The purpose of this `<div>` tag, which has absolutely no
-  semantic value, is to provide some styleable strucure to the entire page. If you do not use
-  it, you can and should remove it, and its closing tag at the bottom of the page, just before
-  the `<script>` tag.
+  The only `<div>` tag in the RPK. The purpose of this `<div>` tag, which has absolutely
+  no semantic value, is to provide some styleable strucure to the entire page. If you do
+  not use it, you can and should remove it, and its closing tag at the bottom of the page,
+  just before the `<script>` tag.
 -->
 <div id="page">
 
   <!--
-    Here is the first of the new HTML sectioning elements, `<header>`. Its use is described in
-    Chapter 16. When a `<header>` is used for content that describes the entire page, it can
-    be useful to assign it a matching `id` value.
+    Here is the first of the new HTML sectioning elements, `<header>`. Its use is
+    described in Chapter 16. When a `<header>` is used for content that describes the
+    entire page, it can be useful to assign it a matching `id` value.
   -->
   <header id="header">
     <!--
-      The first line of content is a semantically rich `<h1>` tag, probably the only one that
-      should appear on the page, which includes the name of the site and a full, canonical URL
-      to the site’s home page. The `<a>` tag here also uses the `rel-home` microformat, which
-      is detailed at http://microformats.org/wiki/rel-home
+      The first line of content is a semantically rich `<h1>` tag, probably the only one
+      that should appear on the page, which includes the name of the site and a full,
+      canonical URL to the site’s home page. The `<a>` tag here also uses the `rel-home`
+      microformat, which is detailed at http://microformats.org/wiki/rel-home
     -->
     <h1><a href="http://example.com/" rel="home">Site Name</a></h1>
 
@@ -146,23 +149,26 @@
     <p class="tagline">Site Tagline</p>
 
     <!--
-      Rounding out the `<header>` for the page is the `<nav>` tag, which surrounds an unordered
-      list of links to the major areas of the site. Chapters 7 and 8 discuss the accessibility
-      and usability of site navigation. Chapter 16 discusses the structure of navigation areas
-      in HTML, and Chapter 21 covers how navigation fits with your site architecture.
+      Rounding out the `<header>` for the page is the `<nav>` tag, which surrounds an
+      unordered list of links to the major areas of the site. Chapters 7 and 8 discuss the
+      accessibility and usability of site navigation. Chapter 16 discusses the structure
+      of navigation areas in HTML, and Chapter 21 covers how navigation fits with your
+      site architecture.
     -->
     <nav id="navigation">
       <ul class="navigation">
         <!--
-          This first item takes an `accessibility` class and is hidden from view in the RPK's
-          `css/screen.css` file. See Chapter 7 for a discussion of accessibility enhancements
-          to navigation for low-vision users and users of other assistive technologies.
+          This first item takes an `accessibility` class and is hidden from view in the
+          RPK's `css/screen.css` file. See Chapter 7 for a discussion of accessibility
+          enhancements to navigation for low-vision users and users of other assistive
+          technologies.
         -->
         <li class="accessibility"><a href="#content">Skip to page content</a></li>
         <!--
           These two links, to Home and About, use root-relative links. If you need to use
           relative links, remove the opening slash before `/about/`. The link to `Home`
-          will depend on how you have created the architecture of your site. See Chapter 21.
+          will depend on how you have created the architecture of your site. See Chapter
+          21.
         -->
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
@@ -172,42 +178,43 @@
 
   <!--
     Here, the `<main>` tag opens. `<main`> can only be used once per page, and should not
-    have nested within it any repeating content, such as a repeated `<header>` or `<footer>`,
-    or a site-wide `<aside>`. `<main>` is discussed in Chapter 16, and the MDN documentation
-    for it is at https://developer.mozilla.org/docs/Web/HTML/Element/main
+    have nested within it any repeating content, such as a repeated `<header>` or
+    `<footer>`, or a site-wide `<aside>`. `<main>` is discussed in Chapter 16, and the MDN
+    documentation for it is at https://developer.mozilla.org/docs/Web/HTML/Element/main
 
-    As another landmark section, `<main>` has its `id` attribute set to `content`, which is
-    referenced in the accessible navigation using a fragment identifier (`#content`). See
-    Chapter 16.
+    As another landmark section, `<main>` has its `id` attribute set to `content`, which
+    is referenced in the accessible navigation using a fragment identifier (`#content`).
+    See Chapter 16.
   -->
   <main id="content">
 
     <!--
-      The RPK default structure uses an `<article>` element, which will likely be the proper
-      sectioning element for most conetnt pages. An alternate pattern, using `<section>` as
-      the primary grouping element, is presented below.
+      The RPK default structure uses an `<article>` element, which will likely be the
+      proper sectioning element for most conetnt pages. An alternate pattern, using
+      `<section>` as the primary grouping element, is presented below.
 
-      Whether `<article>` or `<section>` is the primary element, it can take a landmark `id`
-      value of `primary`.
+      Whether `<article>` or `<section>` is the primary element, it can take a landmark
+      `id` value of `primary`.
     -->
     <article id="primary">
       <!--
         `<article>` and `<section>` elements must open with a heading element of some kind
-        in order to be considered valid HTML. See the content-sectioning elements documentation
-        on MDN: https://developer.mozilla.org/docs/Web/HTML/Element#Content_sectioning
+        in order to be considered valid HTML. See the content-sectioning elements
+        documentation on MDN:
+        https://developer.mozilla.org/docs/Web/HTML/Element#Content_sectioning
 
-        Because the site title is structure in an `<h1>` tag above, the primary section can open
-        with an `<h2>` tag. Any nested `<section>` elements will open with `<h3>`. If those
-        sections are divided further, `<h4>` would be the next level of heading. See Chapters 11
-        and 16.
+        Because the site title is structure in an `<h1>` tag above, the primary section
+        can open with an `<h2>` tag. Any nested `<section>` elements will open with
+        `<h3>`. If those sections are divided further, `<h4>` would be the next level of
+        heading. See Chapters 11 and 16.
       -->
       <h2>Page Title</h2>
 
       <!--
-        This little paragraph is just for informational purposes. Note that it is being properly
-        used as a paragraph. Only use the `<p>` tag to mark up content that is actually a
-        paragraph: something that is at least a sentence or standalone phrase that is not
-        a heading, as in the site tagline in the `<header>` above.
+        This little paragraph is just for informational purposes. Note that it is being
+        properly used as a paragraph. Only use the `<p>` tag to mark up content that is
+        actually a paragraph: something that is at least a sentence or standalone phrase
+        that is not a heading, as in the site tagline in the `<header>` above.
       -->
       <p>
         Begin your design work the mobile-first way by sizing your browser window to be very
@@ -235,7 +242,8 @@
     </article>
 
     <!--
-      Use this markup pattern instead of <article> for a <section>-based overview-like page:
+      Use this markup pattern instead of <article> for a <section>-based overview-like
+      page:
     -->
     <!--
     <section id="primary">
@@ -254,18 +262,18 @@
 
     <!--
       An `<aside>` tag appears here for structure supporting or sidebar-style content that
-      is relevant to the entire page. As the comment below notes, `<aside>` should be nested
-      with respect to the content it supports.
+      is relevant to the entire page. As the comment below notes, `<aside>` should be
+      nested with respect to the content it supports.
     -->
     <aside id="supporting">
       <h2>Supporting Content Title</h2>
       <!--
-        If the supporting content is related to a specific article or section, nest your <aside>
-        inside the relevant <article> or <section> tag. Do not reuse the `supporting` id if
-        you have multiple <aside> elements on a page.
+        If the supporting content is related to a specific article or section, nest your
+        <aside> inside the relevant <article> or <section> tag. Do not reuse the
+        `supporting` id if you have multiple <aside> elements on a page.
 
-        And if the supporting content is repeated over multiple pages, move your <aside> element
-        outside of the <main> tag.
+        And if the supporting content is repeated over multiple pages, move your <aside>
+        element outside of the <main> tag.
       -->
 
     <!--/#supporting-->
@@ -275,27 +283,27 @@
   </main>
 
   <!--
-    The page content closes with a rather complex `<footer>` element that is structured
-    to support content licensed under Creative Commons. This markup is a semantic, HTML5-friendly
-    improvement over the default XHTML-derived markup provided at the Creative Commons website
-    https://wiki.creativecommons.org/wiki/RDFa
+    The page content closes with a rather complex `<footer>` element that is structured to
+    support content licensed under Creative Commons. This markup is a semantic,
+    HTML5-friendly improvement over the default XHTML-derived markup provided at the
+    Creative Commons website https://wiki.creativecommons.org/wiki/RDFa
 
-    The `prefix` attribute sets namespaces for Dublin Core metadata, which Creative Commons uses,
-    and Creative Commons’s own metadata. If you are not licesing your content under Creative
-    Commons, you can remove the `prefix` attribute and its contents, as well as all `rel` and
-    `property` attributes and their contents below.
+    The `prefix` attribute sets namespaces for Dublin Core metadata, which Creative
+    Commons uses, and Creative Commons’s own metadata. If you are not licesing your
+    content under Creative Commons, you can remove the `prefix` attribute and its
+    contents, as well as all `rel` and `property` attributes and their contents below.
   -->
   <footer id="footer" prefix="dc: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#">
 
     <!--
-      The footer contains an unordered list for structure different types of credit and license
-      information.
+      The footer contains an unordered list for structure different types of credit and
+      license information.
     -->
     <ul class="credits">
       <!--
-        The `rights` list item contains copyright and, optionally, Creative-Commons licensing
-        information. Be sure to replace the `href` to point to your site's own home page, in
-        addition to filling in the proper titles and author information.
+        The `rights` list item contains copyright and, optionally, Creative-Commons
+        licensing information. Be sure to replace the `href` to point to your site's own
+        home page, in addition to filling in the proper titles and author information.
       -->
       <li class="rights">
         <cite property="dc:title">Site or Page Title</cite> © by
@@ -312,19 +320,21 @@
       </li>
 
       <!--
-        The `colophon` list item, if you choose to include it, can contain links to projects like
-        the RPK itself, as well as to any libraries or other services used to create and deliver
-        your site. Including the colophon is, like any content in the RPK, optional.
+        The `colophon` list item, if you choose to include it, can contain links to
+        projects like the RPK itself, as well as to any libraries or other services used
+        to create and deliver your site. Including the colophon is, like any content in
+        the RPK, optional.
 
-        There are also two links to the HTML and CSS validators; they use a special ‘referer’
-        syntax and will only function properly on a publically available web server. They will
-        not work on a development server like `http-server`. So you will need to manually
-        validate your HTML and CSS at https://validator.w3.org/ and
+        There are also two links to the HTML and CSS validators; they use a special
+        ‘referer’ syntax and will only function properly on a publically available web
+        server. They will not work on a development server like `http-server`. So you will
+        need to manually validate your HTML and CSS at https://validator.w3.org/ and
         https://jigsaw.w3.org/css-validator/ until your site is live.
 
-        Fun fact: *colophon* is a term derived from traditional book publishing. Some books
-        include a short statement about the typefaces used in the book, artwork appearing on
-        the cover, etc. See https://en.wikipedia.org/wiki/Colophon_(publishing)
+        Fun fact: *colophon* is a term derived from traditional book publishing. Some
+        books include a short statement about the typefaces used in the book, artwork
+        appearing on the cover, etc. See
+        https://en.wikipedia.org/wiki/Colophon_(publishing)
       -->
       <li class="colophon">
         Site created with the <a href="https://github.com/webpges/rpk">RPK</a> using
@@ -338,9 +348,9 @@
 </div>
 
 <!--
-  Finally, at the very close of the page, this `<script>` tag loads up the RPK’s JavaScript
-  file, which by default loads the jQuery library in a clever way and makes some minor
-  modifications to the `<html>` tag’s opening `nojs` class.
+  Finally, at the very close of the page, this `<script>` tag loads up the RPK’s
+  JavaScript file, which by default loads the jQuery library in a clever way and makes
+  some minor modifications to the `<html>` tag’s opening `nojs` class.
 
   If you do not plan to use JavaScript, you can delete the `<script>` tag.
 -->
